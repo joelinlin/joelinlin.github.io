@@ -124,21 +124,18 @@
     </div>
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <ul>
-<li><input disabled type="checkbox"> [TOC]</li>
-</ul>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>Javascript中有三种声明方式：</p>
+        <h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>Javascript中有三种声明方式：</p>
 <ul>
 <li><code>var</code>声明一个变量，可选初始化一个值。</li>
 <li><code>let</code>声明一个块级作用域的局部变量，可选初始化一个值。</li>
 <li><code>const</code>声明一个块级作用域的只读常量。</li>
 </ul>
-<h2 id="var声明"><a href="#var声明" class="headerlink" title="var声明"></a>var声明</h2><ul>
+<h2 id="var"><a href="#var" class="headerlink" title="var"></a>var</h2><ul>
 <li>作用域： var声明变量为全局变量和函数作用域的局部变量。</li>
 <li>直接赋值。例如<code>x=42</code>。其含义是声明全局变量并赋值。<br>但在<strong>严格模式</strong>下中LHS查询失败，并不会创建并返回一个全局变量，引擎会报出ReferenceError异常。</li>
 <li>变量提升：var声明的变量会被提升到函数作用域顶部。返回<code>undefine</code>。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(message);<span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> message=<span class="string">&#x27;Hi&#x27;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h2><ul>
+<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><ul>
 <li><p>作用域：let声明变量为块级作用域的局部变量。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> message=<span class="string">&quot;Hi&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(message);<span class="comment">//ReferenceError message未定义</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> message=<span class="string">&quot;Hi&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(message);<span class="comment">//Hi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li><p>let声明的变量不会被提升。原因是:在let声明的变量之前，变量处于<strong>暂时性死区</strong>，在这段时间内变量被引用时，会报<code>ReferenceError</code>未定义错误。</p>
@@ -154,7 +151,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="const声明"><a href="#const声明" class="headerlink" title="const声明"></a>const声明</h2><p>const创建只读的常量。</p>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>const创建只读的常量。</p>
 <ul>
 <li>常量不可以通过重新赋值改变其值，也不可以在代码运行时重新声明。它必须被初始化为某个值。</li>
 <li>对象属性被赋值为常量不受保护。以下的语句执行时不会有错误。</li>
