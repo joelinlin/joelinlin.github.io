@@ -1,0 +1,10 @@
+name: CI Pipeline
+on: [push]   # 监听所有分支的 push 事件
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4   # 拉取代码
+      - name: Simulate tests
+        run: echo "测试通过！"      # 模拟测试（实际项目替换为真实命令）
